@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 40px;
+    background-color: #121212;
+}
+
+.container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.lower, .upper{
+    width: 100%;
+}
+
+.lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.result{
+    font-weight: bold;
+    font-size: small;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
