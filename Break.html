@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; width: 100%; box-sizing: border-box; background-color: #121212; color: white;">
+    
+    <h3>Break Ends in <span id="remain"></span></h3>
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const targetTime = new Date();
+            targetTime.setHours(11);
+            targetTime.setMinutes(50);
+            targetTime.setSeconds(0);
+            targetTime.setMilliseconds(0);
+
+            let remainingTime = targetTime - now;
+            if (remainingTime < 0) {
+                document.getElementById("remain").innerText = ` Time is up!`;
+                return;
+            }
+
+            const hours = Math.floor(remainingTime / (60 * 60 * 1000));
+            remainingTime %= 60 * 60 * 1000;
+            const minutes = Math.floor(remainingTime / (60 * 1000));
+            remainingTime %= 60 * 1000;
+            const seconds = Math.floor(remainingTime / 1000);
+            document.getElementById("remain").innerText = `${hours}h ${minutes}m ${seconds}s`;
+        
+        }
+        setInterval(updateCountdown, 1000);
+
+    </script>
+</body>
+</html>
