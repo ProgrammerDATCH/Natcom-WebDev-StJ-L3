@@ -5,22 +5,47 @@
     <style>
         nav{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            background-color: aqua;
             align-items: center;
-            /* gap: 20px; */
+            padding: 0 30px;
         }
+        ul{
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+            box-shadow: 0 0 10px black;
+            padding: 7px;
+            border-radius: 10px;
+        }
+        /* section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        } */
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo">LOGO</div>
-        <p>Third</p>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">AboutUs</a></li>
-            <li><a href="#">ContactUs</a></li>
-            <li><a href="#">Help</a></li>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">AboutUs</a></li>
+            <li><a href="#contact">ContactUs</a></li>
+            <li><a href="#help">Help</a></li>
         </ul>
     </nav>
+
+    <!-- <section id="home" style="background-color: blue; height: 700px; width: 100%;">HOME</section>
+    <section id="about" style="background-color: green; height: 1000px; width: 100%;">About</section>
+    <section id="contact" style="background-color: yellow; height: 1000px; width: 100%;">CONTACT</section>
+    <section id="help" style="background-color: brown; height: 1000px; width: 100%;">HELP</section> -->
+    
+    
 </body>
 </html>
