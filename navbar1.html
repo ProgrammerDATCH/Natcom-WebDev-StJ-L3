@@ -3,6 +3,9 @@
 <head>
     <title>NavBar</title>
     <style>
+         /* 0px   - 768px	: Phone
+            768px - 1024px  : Tablet
+            1024px- up 	: Laptop */
         nav{
             display: flex;
             justify-content: space-between;
@@ -20,6 +23,12 @@
             box-shadow: 0 0 10px black;
             padding: 7px;
             border-radius: 10px;
+        }
+        /* Responsiveness for Phone */
+        @media only screen and (max-width: 768px){
+            nav{
+                background-color: green;
+            }
         }
         
         /* section{
