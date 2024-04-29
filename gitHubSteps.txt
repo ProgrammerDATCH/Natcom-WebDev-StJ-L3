@@ -1,0 +1,7 @@
+git clone https://github.com/ProgrammerDATCH/Natcom-l3-portfolio.git
+ (--open CDM in cloned folder--)
+git add .
+git commit -m "any-message"
+git push
+
+HOSTING: settings -> Pages -> Branch (none--->main -> Save)

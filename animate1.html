@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation and Transition Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+        flex-direction: column;
+    
+    }
+    .box {
+        width: 400px;
+        height: 100px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        animation: rotate 2s linear infinite;
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .box:hover {
+        background-color: #e74c3c;
+    }
+
+    .box.color-change {
+        animation: change-color 2s linear infinite alternate;
+    }
+    .my-name{
+        animation: change-name-color 2s linear infinite alternate;
+        font-size: 35px;
+    }
+
+    @keyframes change-color {
+        0% { background-color: #3498db; }
+        100% { background-color: #2ecc71; }
+    }
+
+    @keyframes change-name-color {
+        0% { color: blue; }
+        30% { color: yellow; }
+        60% { color: green; }
+        100% { color: cyan; }
+    }
+
+    .box.size-change {
+        animation: size-change 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes size-change {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.2); }
+    }
+</style>
+</head>
+<body>
+<div class="box">Animation</div>
+<div class="box color-change">Colors Change</div>
+<div class="box size-change">Size Change</div>
+<p class="my-name">David</p>
+</body>
+</html>
